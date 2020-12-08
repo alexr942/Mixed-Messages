@@ -1,44 +1,32 @@
-//  keys in it to be executed!
+//get a random number
+function randomNumber(num) {
+    let random = Math.floor(Math.random() * num);
+    return random
+}
+
 const mealPlan = {
-breakfast: ['Shreddies', 'Bacon Roll', 'Coco pops', 'Sausage Roll'],
-lunch: ['Salad', 'French Toast', 'Sandwhich', 'Chicken Wrap' ],
+breakfast: ['Shreddies', 'lucky Charms', 'Coco pops', 'weetabix'],
+lunch: ['Salad', 'toast', 'A Sandwhich', 'A Chicken Wrap' ],
 dinner: ['Ribs', 'Fish and chips', 'pizza', 'pasta'],
 }
-var randomNumber = mealPlan[Math.floor(Math.random()* mealPlan.length)];
 
-/* for (let i = 0; i < mealPlan.length; i++){
-return 'for Breakfast you will have' + `${breakfast}`
-} */
+let mealLayout = [];
+  
 
+for(let prop in mealPlan) {
+  let menu = randomNumber(mealPlan[prop].length);
 
-switch(randomNumber){
-    case mealPlan.breakfast:
-        return 'for Breakfast you will have' `${randomNumber} ${mealPlan.breakfast}`
+ switch(prop){
+    case 'breakfast':
+        mealLayout.push('for Breakfast you should have a bowl of ' + `${mealPlan[prop][menu]}`)
         break;
-        case mealPlan.lunch:
-            return 'for lunch you will have' `${randomNumber} ${mealPlan.lunch}`
+        case 'lunch':
+           mealLayout.push('for lunch you should have ' + `${mealPlan[prop][menu]}`)
             break;
-            case mealPlan.dinner:
-                return 'for dinner you should have ' `${randomNumber} ${mealPlan.dinner}`
+            case 'dinner':
+                  mealLayout.push('for dinner you should have ' + `${mealPlan[prop][menu]}`)
+                 break;
+} 
 }
-console.log
 
-
-
-
-
-
-// this application will show random messages everytime it is loaded
-// this first code with welcome messages helped to get a very basic understanding of what i want to do going forward.
-/*var welcomeMessages = ["Wonderful Day", "Relaxed Day", "Great day", "Great Weekend", "Good rest of the week"]
-var randomNumber = welcomeMessages[Math.floor(Math.random()* welcomeMessages.length)];
-*/
-
-
-
-
-
-
-
-
-
+console.log(mealLayout)
