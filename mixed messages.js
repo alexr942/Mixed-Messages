@@ -18,14 +18,14 @@ for(let prop in mealPlan) {
 
  switch(prop){
     case 'breakfast':
-        mealLayout.push('for Breakfast you should have a bowl of ' + `${mealPlan[prop][menu]}`)
-        break;
-        case 'lunch':
-           mealLayout.push('for lunch you should have ' + `${mealPlan[prop][menu]}`)
-            break;
-            case 'dinner':
-                  mealLayout.push('for dinner you should have ' + `${mealPlan[prop][menu]}`)
-                 break;
+    mealLayout.push('for Breakfast you should have a bowl of ' + `${mealPlan[prop][menu]}`)
+    break;
+    case 'lunch':
+    mealLayout.push('for lunch you should have ' + `${mealPlan[prop][menu]}`)
+    break;
+    case 'dinner':
+    mealLayout.push('for dinner you should have ' + `${mealPlan[prop][menu]}`)
+    break;
 } 
 }
 
