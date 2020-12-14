@@ -28,5 +28,5 @@ for(let prop in mealPlan) {
     break;
 } 
 }
-
-console.log(mealLayout)
+var meal = mealLayout.join('. ') + '.' ;
+console.log(meal)
